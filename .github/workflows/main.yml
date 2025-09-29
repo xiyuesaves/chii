@@ -2,13 +2,6 @@ name: CI
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'master'
-    paths:
-      - 'devtools/**/*'
-      - 'server/**/*'
-      - 'src/**/*'
 
 jobs:
   ci:
