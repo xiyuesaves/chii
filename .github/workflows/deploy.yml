@@ -27,7 +27,7 @@ jobs:
           npm run build
           mkdir -p ../../node/chii
           cp -r bin public server test package.json ../../node/chii
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: chii-build
           path: node/chii/
