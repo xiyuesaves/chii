@@ -55,6 +55,14 @@ if (!id) {
   sessionStore.setItem('chii-id', id);
 }
 
+// 如果当前是指定环境，则给chii-id添加window-id
+const windowId = sessionStore.getItem('window-id') || '';
+if (windowId) {
+  const oldId = id.replace(/-winId-.+$/, '');
+  id = `${oldId}-winId-${windowId}`;
+  sessionStore.setItem('chii-id', id);
+}
+
 export {
   // https://chii.liriliri.io/base/
   serverUrl,
